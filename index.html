@@ -1,0 +1,71 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<script>
+    
+function calculate()
+{
+   var x = document.getElementById("textbox").value;
+   var ans = eval (x);
+   document.getElementById("textbox").value = ans ;
+}
+function cleartext()
+{
+  document.getElementById("textbox").value = " ";   
+
+}
+function typetext(t)
+{
+   var bucket = document.getElementById("textbox").value;
+   bucket = bucket + t;
+   document.getElementById("textbox").value = bucket;
+}
+</script>
+<body>
+    <h1>My Calculator</h1>
+    <form>
+        <table>
+            <tr>
+                <td colspan="3"><input type= "text" id = "textbox"  /></td>
+                <td><input type= "button" id = "cl" Value = "c"  onclick="cleartext ()" ></td>
+            </tr>
+            <tr>
+               <td><input type= "button"  id = "n7" Value = "7"  onclick= "typetext('7')" /></td>
+                <td><input type= "button" id = "n8" Value = "8"  onclick= "typetext('8')" ></td>
+                <td><input type= "button" id = "n9" Value = "9"  onclick= "typetext('9') " /></td>
+                <td><input type= "button" id = "nd" Value = "/"  onclick= "typetext('/')" ></td>
+            </tr>
+            <tr>
+                <td><input type= "button"  id = "n4" Value = "4"  onclick= "typetext('4')" /></td>
+                 <td><input type= "button" id = "n5" Value = "5"  onclick= "typetext('5')" ></td>
+                 <td><input type= "button" id = "n6" Value = "6"  onclick= "typetext('6')" /></td>
+                 <td><input type= "button" id = "nm" Value = "*"  onclick= "typetext('*') " ></td>
+             </tr>
+
+             <tr>
+                <td><input type= "button"  id = "n1" Value = "1"  onclick= "typetext('1')" /></td>
+                 <td><input type= "button" id = "n2" Value = "2"  onclick= "typetext('2')" ></td>
+                 <td><input type= "button" id = "n3" Value = "3"  onclick= "typetext('3')" /></td>
+                 <td><input type= "button" id = "ni" Value = "-"  onclick= "typetext('-') " ></td>
+             </tr>
+             <tr>
+                <td><input type= "button"  id = "ndot" Value = "."  onclick= "typetext('.')" /></td>
+                 <td><input type= "button" id = "n0" Value = "0"  onclick= "typetext('0') " ></td>
+                 <td><input type= "button" id = "eq" Value = "="  onclick= "calculate() " /></td>
+                 <td><input type= "button" id = "np" Value = "+"  onclick= "typetext('+') " ></td>
+             </tr>
+            
+
+        </table>
+
+
+
+    </form>
+    
+</body>
+</html>
